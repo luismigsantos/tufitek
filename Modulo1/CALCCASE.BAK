@@ -1,0 +1,66 @@
+program calccase;
+uses CRT;
+var n1,n2,res:real;
+    op:char;
+
+begin
+clrscr;
+textbackground (red);
+textcolor (green);
+writeln('Soma +');
+delay (500);
+writeln('Subtracá∆o -');
+delay (500);
+writeln('Multiplicaá∆o *');
+delay (500);
+writeln('Divis∆o /');
+delay (500);
+writeln('Escolha uma opá∆o');
+textbackground (black);
+textcolor (white);
+readln (op);
+case op of
+'+': Begin
+     write ('Introduza o 1o numero: ');
+     readln (n1);
+     write ('Introduza o 2o numero: ');
+      readln (n2);
+      res:= n1+n2;
+      writeln ('O resultado da soma Ç: ', res:6:2);
+      end;
+'-': Begin
+     write ('Introduza o 1o numero: ');
+     readln (n1);
+     write ('Introduza o 2o numero: ');
+     readln (n2);
+     res:= n1-n2;
+     writeln ('O resultado da subtracá∆o Ç: ', res:6:2);
+     end;
+'*': Begin
+     write ('Introduza o 1o numero: ');
+     readln (n1);
+     write ('Introduza o 2o numero: ');
+     readln (n2);
+       res:= n1*n2;
+       writeln ('O resultado da multiplicaá∆o Ç: ', res:6:2);
+       end;
+'/': Begin
+     write ('Introduza o 1o numero: ');
+     readln (n1);
+     write ('Introduza o 2o numero: ');
+     readln (n2);
+     if n2=0 then
+        begin
+          writeln ('Imposs°vel dividir por 0');
+        end
+     else
+       begin
+        res:= n1/n2;
+        writeln ('O resultado da divis∆o Ç: ', res:6:2);
+       end
+     end;
+else
+    writeln ('Operaá∆o Inv†lida');
+end;
+readln;
+End.

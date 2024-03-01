@@ -1,0 +1,27 @@
+program num;
+uses CRT;
+var n1,n2,res:real;
+    y:char;
+
+begin
+repeat
+clrscr;
+writeln ('Introduza o primeiro numero');
+readln (n1);
+writeln ('Introduza o segundo numero');
+readln (n2);
+if n1 > n2 then
+   begin
+   res:= n1;
+   writeln (res:6:2, ' ‚ maior que ', n2:6:2) ;
+   end
+else
+if n1 < n2 then
+   begin
+   res:=n2;
+   writeln (res:6:2, ' ‚ maior que ' ,n1:6:2);
+   end;
+writeln ('Deseja repetir o programa (s/n)');
+readln (y);
+until (y='N') or (y='n');
+end.

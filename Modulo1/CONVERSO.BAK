@@ -1,0 +1,45 @@
+program conversor;
+uses crt;
+var n1,res:real;
+var op,y:char;
+
+begin
+repeat
+Sound (1000);
+Delay(1000);
+NoSound;
+clrscr;
+textcolor (green);
+writeln ('     *-------------------------CONVERSOR DE EUROS------------------------*');
+writeln ('     |                                                                   |');
+writeln ('     | Op‡Æo a - Converte euros para escudos                             |');
+writeln ('     |                                                                   |');
+writeln ('     | Op‡Æo b - Converte escudos para euros                             |');
+writeln ('     |                                                                   |');
+writeln ('     *-------------------------------------------------------------------*');
+textcolor (white);
+writeln(' ');
+write ('Escreva o n£mero: ');
+readln (n1);
+write ('Escolha op‡Æo: ');
+readln (op);
+       if(op = 'a') then
+          begin
+          GoToXY (25,15);
+          res:=(n1)*200.482;
+          write ('o resultado em escudos ‚ de: ',res:6:3);
+          end
+       else
+       if(op = 'b') then
+          begin
+          GoToXY (25,15);
+          res:=(n1)/200.482;
+          write ('o resultado em euros ‚ de: ',res:6:2);
+          end
+          else
+       write ('Conversor inv lido');
+writeln ('Deseja repetir o programa (s/n)');
+read (y);
+until (y='N') or (y='n');
+readln;
+end.
